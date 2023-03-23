@@ -30,7 +30,14 @@ const FormList: React.FC<FormListProps> = ({forms}) => {
             <Grid xs={0} sm={2} />
             <Grid xs={12} sm={10}>
                 <Container>
-                    <Text h1>Forms</Text>
+                    <Text
+                        h1
+                        css={{
+                            textGradient: "45deg, $blue600 -20%, $pink600 50%",
+                        }}
+                    >
+                        Forms
+                    </Text>
                     {formLinks}
                 </Container>
             </Grid>
