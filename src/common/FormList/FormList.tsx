@@ -6,9 +6,9 @@ interface Form {
     formId: string;
 }
 
-type FormLinkProps = Form;
+type FormListItemProps = Form;
 
-const FormLink: React.FC<FormLinkProps> = ({name, formId}) =>
+const FormListItem: React.FC<FormListItemProps> = ({name, formId}) =>
     <li>
         <Link block href={formId}>
             {name}
@@ -22,7 +22,7 @@ interface FormListProps {
 
 const FormList: React.FC<FormListProps> = ({forms}) => {
     const formLinks = forms.map(
-        ({name, formId}) => <FormLink key={formId} name={name} formId={formId} />
+        ({name, formId}) => <FormListItem key={formId} name={name} formId={formId} />
     );
 
     return (
